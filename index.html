@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticketing System</title>
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="p-2 lg:px-32">
+        <!-- nav -->
+        <section>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <a class="btn btn-ghost text-xl .font-railway font-bold">P-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-gray-400">Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="flex navbar-end">
+                  <a class="btn bg-[#1dd10019] text-[#1dd100]">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+        </section>
+        <!-- banner -->
+        <section>
+            <div class="hero min-h-[500px] rounded-[32px] lg:mt-12" style="background-image: url(images/banner.png) ">
+                <div class="hero-overlay banner-bg rounded-[32px]"></div>
+                <div class="hero-content text-center text-neutral-content">
+                  <div class="max-w-screen-sm">
+                    <h1 class="lg:mb-2 text-5xl font-bold">End-to-End Travel with</h1>
+                    <p class="text-[#1dd100] mb-4 text-5xl font-bold">P Paribahan</p>
+                    <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+                    <button class="btn btn-success bg-[#1dd100] text-black border-0">Buy Ticket</button>
+                  </div>
+                </div>
+              </div>
+            
+        </section>
+        <!-- cupon -->
+        <section>
+            <div class="flex flex-col w-full justify-center text-center">
+                <h1 class="font-railway font-bold text-4xl mt-48">Best offers for you</h1>
+                <!-- coupon area -->
+                <div class="font-inter flex flex-col space-y-5 lg:flex-row justify-between mt-6">
+                    <!-- coupon-1 -->
+                    <div class="card lg:w-[600px] bg-[#ffbf0f] text-primary-content">
+                        <div class="flex justify-center items-center">
+                            <div class="p-4 lg:p-9 w-full text-left">
+                                <h2 class="font-black text-2xl">15% OFF</h2>
+                                <p class="font-medium">on your next purchase</p>
+                                <p class="text-gray-500">use by January 2026</p>
+                              </div>
+                              <img src="images/cupon-devider.png" alt="">
+                              <div class="w-3/4 text-left">
+                                <h2 class="font-black text-2xl font-railway">NEW15</h2>
+                                <p class="text-gray-500">Coupon Code</p>
+                              </div>
+                        </div>
+                    </div>
+                    <!-- coupon-2 -->
+                    <div class="card lg:w-[600px] bg-[#f78c9c] text-primary-content">
+                        <div class="flex justify-center items-center">
+                            <div class="p-4 lg:p-9 w-full text-left">
+                                <h2 class="font-black text-2xl">20% OFF</h2>
+                                <p class="font-medium">on your next purchase</p>
+                                <p class="text-gray-500">use by January 2026</p>
+                              </div>
+                              <img src="images/cupon-devider.png" alt="">
+                              <div class="w-3/4 text-left">
+                                <h2 class="font-black text-2xl font-railway">Couple 20</h2>
+                                <p class="text-gray-500">Coupon Code</p>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- coupon area ends -->
+                <div>
+                    <button class="btn btn-outline btn-success max-w-40 mt-10">See All Offer</button>
+                </div>
+            </div>
+        </section>
+    </header>
+</body>
+</html>
