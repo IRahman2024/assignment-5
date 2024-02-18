@@ -10,8 +10,9 @@
     font-family: "Raleway", sans-serif;
 }
 .gray-txt{
+    font-size: 1.125rem;
     font-weight: 500;
-    color: #030712b2;
+    color: rgb(107 114 128);
 }
 
 .banner-bg{
