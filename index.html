@@ -57,7 +57,7 @@
                 <div class="font-inter flex flex-col space-y-5 lg:space-y-0 lg:flex-row justify-between mt-6">
                     <!-- coupon-1 -->
                     <div class="card lg:w-[600px] bg-[#ffbf0f] text-primary-content">
-                        <div class="flex justify-center items-center">
+                        <div class="flex justify-center items-center text-black">
                             <div class="p-4 lg:p-9 w-full text-left">
                                 <h2 class="font-black text-2xl">15% OFF</h2>
                                 <p class="font-medium">on your next purchase</p>
@@ -72,7 +72,7 @@
                     </div>
                     <!-- coupon-2 -->
                     <div class="card lg:w-[600px] bg-[#f78c9c] text-primary-content">
-                        <div class="flex justify-center items-center">
+                        <div class="flex justify-center items-center text-black">
                             <div class="p-4 lg:p-9 w-full text-left">
                                 <h2 class="font-black text-2xl">20% OFF</h2>
                                 <p class="font-medium">on your next purchase</p>
@@ -95,9 +95,9 @@
     </header>
 
     <main>
-      <section class="flex flex-col text-center items-center mt-14 border-4 border-red-600  bg-[#c8d0d0] mb-32 pb-10">
+      <section class="flex flex-col text-center items-center mt-14  rounded-t-[180px] bg-[#c8d0d0] mb-0 p-40">
         <!-- welcome text -->
-        <div id="counterPart" class="flex flex-col items-center mt-12 mb-12">
+        <div class="flex flex-col items-center mt-12 mb-12">
           <h1 class="font-railway font-bold text-5xl">P.H Paribahon</h1>
           <p class="font-inter max-w-[45.5rem] text-xl font-normal text-gray-500">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
         </div>
@@ -161,7 +161,7 @@
         </div>
 
         <!-- seat and confirm, section -->
-        <div class="flex">
+        <div class="flex" id="counterPart">
           <!-- seat selection -->
           <div class=" w-1/2">
             <div>
@@ -181,7 +181,7 @@
             <hr class="border-gray-400 border-2 border-dashed mt-2">
 
             <!-- main seat part starts -->
-            <div class="flex border-4 border-blue-500 justify-end"><img class="bg-white m-2 w-20 px-4 py-2" src="images/car-steering-wheel.png" alt=""></div>
+            <div class="flex justify-end"><img class="bg-white m-4 mb-8 w-20 px-4 py-2 rounded-md" src="images/car-steering-wheel.png" alt=""></div>
             <div id="btn-container" class="grid grid-cols-5 gap-10 justify-center items-center mr-8">
               <p class="border-black text-black">A</p>
               <button onclick="action('A1')" id="A1" class="btn w-28">A1</button>
@@ -251,62 +251,34 @@
               <hr class="border-gray-400 border-2 border-dashed mb-2">
               <!-- <hr class="border-dashed border-gray-500 border-2 w-3/4"> -->
               <!-- coupon writing card -->
-              <div class="card max-w-full bg-slate-500 mt-4 text-primary-content text-black">
+              <div class="card max-w-full bg-white mt-4 text-primary-content text-black">
                 <div class="card-body">
-                  <!-- <div class="flex justify-evenly">
-                    <h2 class="text-sm font-medium">Seat <span id="my-seat" class="text-white bg-green-500 px-1">0</span></h2>
-                    <h2 class="text-sm font-medium">Class</h2>
-                    <h2 class="text-sm font-medium">Price</h2>
-                  </div>
-                  <hr class="border-dashed mt-1 border-gray-500 border-2 w-[600px]"> -->
-
-                    <!-- <ul class="flex flex-col">
-                      <div class="flex justify-evenly">
-                        <li>C2</li>
-                        <li>economy</li>
-                        <li>202</li>
-                      </div>
-                      <div class="flex justify-evenly">
-                        <li>C2</li>
-                        <li>economy</li>
-                        <li>202</li>
-                      </div>
-                    </ul> -->
-
+                  
                     <div class="flex text-end overflow-x-auto">
                       <table class="table">
                         <!-- head -->
                         <thead>
                           <tr>
-                            <th class="text-sm font-medium text-black">Seat <span id="my-seat" class="text-white bg-green-500 px-1">0</span></th>
+                            <th class="text-sm font-medium text-black">Seat <span id="my-seat" class="text-white bg-green-500 px-1 rounded-md px-1">0</span></th>
                             <th class="text-sm font-medium text-black">Class</th>
                             <th class="text-sm font-medium text-black">Price</th>
                           </tr>
                         </thead>
-                        <tbody id="body">
-                          
-                          
+                        <tbody id="body">                          
                         </tbody>
                       </table>
                     </div>
-
-
-
-
-
-
-
                     <hr class="border-dashed border-gray-500 border-2 w-full mt-4 mb-4">
-                  
+
                     <div class="flex justify-around mb-4">
                       <h2 class="text-sm font-medium">Total Price</h2>
                       <h2 class="text-sm font-medium">BDT <span id="total-cost">0</span></h2>
                     </div>
-
+                    <!-- coupon area -->
                     <div id="coupon-area" class="">
                       <label id="coupon-box" class="input input-bordered flex items-center justify-end p-2">
                         <input type="text" id="coupon-input" class="grow" placeholder="Have you any Coupon Code?">
-                        <button onclick="getCoupon()" id="submit"class="btn bg-green-400 text-white hidden">Apply</button>
+                        <button onclick="getCoupon()" id="submit"class="btn bg-[#1dd100] text-white hidden">Apply</button>
                       </label>
                     </div>
                     <div class="flex justify-around mt-4">
@@ -345,7 +317,24 @@
                     </div>
 
                     <!-- next button -->
-                    <button onclick="" class="btn bg-green-600 text-white border-0">Next</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button class="btn bg-[#34c71e] b-0 text-white" onclick="my_modal_1.showModal()">Next</button>
+                    <dialog id="my_modal_1" class="modal">
+                      <div class="flex flex-col justify-center items-center modal-box max-w-[750px] h-[500px]">
+                        <img class="mt-12 mb-3 w-[150px]" src="images/success.png" alt="">
+                        <p class="p-0 mx-9 font-inter font-medium text-2xl text-[#1dd100]">SUCCESS</p>
+
+                        <p class="m-0 mb-0 pt-0 text-black font-semibold text-xl  mx-20">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</p>
+                        <p class="mt-2 gray-txt text-sm flex-grow-0">Shortly you will find a confirmation in your email.</p>
+
+                        <div class="modal-action pb-14">
+                          <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn font-robot mt-0 bg-[#27ae60] text-white">Continue</button>
+                          </form>
+                        </div>
+                      </div>
+                    </dialog>
 
                     <div class="flex flex-col lg:flex-row mt-2">
                       <p class="txt-gray text-sm">Terms And Condition</p>
