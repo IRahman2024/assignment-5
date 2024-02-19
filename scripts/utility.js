@@ -59,6 +59,7 @@ function getCoupon(){
     // finds entered coupon code
     const coupon = document.getElementById('coupon-input').value;
     // console.log(coupon);
+    const mobile = document.getElementById('mobile').value;
 
     //initiates grand total function to show final price
     if(coupon){

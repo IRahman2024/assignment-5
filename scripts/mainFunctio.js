@@ -68,6 +68,25 @@ function action(elementId){
         console.log(seatAmount)
     }
 
+
+    const mobile = document.getElementById('mobile');
+    const nextButton = document.getElementById('next');
+
+    mobile.addEventListener("keyup", function (event){
+        const value = event.target.value;
+        if(value === " " || !isNaN(value)){
+            nextButton.removeAttribute('disabled');
+            // mobile.value = ' ';
+        }
+        else
+            nextButton.addAttribute('disabled');
+    })
+
+    nextButton.addEventListener("click", function(){
+        mobile.value = '';
+    })
+    
+
 }
 
 function alert(seat){
