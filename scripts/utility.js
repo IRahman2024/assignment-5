@@ -24,8 +24,6 @@ function addRow(elementId){
 
     const tbody = document.getElementById('body');
     tbody.appendChild(row); 
-
-    console.log(body);
 }
 
 function removeRow(elementId){
@@ -47,45 +45,46 @@ function getCoupon(){
 
     // removes or add apply button
     const submitBtn = document.getElementById('submit');
-    if(seatNoArr.length < 4)
-        submitBtn.classList.add('hidden'); 
-    else
-        submitBtn.classList.remove('hidden');
+    const seatAmount = document.getElementById('total-cost').innerText;
+    const seatNum = parseInt(seatAmount);
+        
 
     //to get discount element
     const discountedCostElement = document.getElementById('discounted-cost');
 
     // shows total cost without discount
-    const cost = 550*seatNoArr.length;
+    const cost = 550*seatNum;
     discountedCostElement.innerText = cost;
 
     // finds entered coupon code
     const coupon = document.getElementById('coupon-input').value;
-    console.log(coupon);
+    // console.log(coupon);
 
     //initiates grand total function to show final price
-    if(coupon && seatNoArr.length === 4){
+    if(coupon){
         const code = coupon;
-        grandTotal(code, cost);
+        grandTotal(code);
         const submitBtn = document.getElementById('submit'); 
     }
 }
 
-function grandTotal(code, cost){
+function grandTotal(code){
 
-    let grandTotal;
+
+    let grandTotal = document.getElementById('total-cost').innerText;
+    const finalCost = parseInt(grandTotal);
     const couponArea = document.getElementById("coupon-area");
 
     if(code === 'NEW15'){
-        grandTotal = cost-cost*.15;
+        grandTotal = finalCost-finalCost*.15;
         couponArea.classList.add('hidden');
     }
     else if(code === 'Couple 20'){
-        grandTotal = cost-cost*.20;
+        grandTotal = finalCost-finalCost*.20;
         couponArea.classList.add('hidden');
     }
     else
-        grandTotal = cost;
+        grandTotal = finalCost;
 
     const discountedCostElement = document.getElementById('discounted-cost');
     discountedCostElement.innerText = grandTotal;

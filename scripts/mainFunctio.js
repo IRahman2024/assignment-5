@@ -12,13 +12,14 @@ function action(elementId){
     // const element = document.getElementById(elementId).innerText;
     // console.log(elementId);
     // seat er value grab korte hbe ar 4 er besi hoile return korbe
-
+    
     const seatAmount = document.getElementById('my-seat').innerText;
 
-    if(seatAmount>3)
+    if(seatAmount>3){
+        alert(seatNoArr.length);
         return;
+    }
 
-    alert(seatNoArr.length);
 
     if(seatNoArr.length<4){
         addBGById(elementId);
@@ -34,7 +35,7 @@ function action(elementId){
         if(index>=0){
             seatNoArr.splice(index, 1);
             removeBGById(elementId);
-            removeRow(elementId);
+            // removeRow(elementId);
         } 
     }
     else{
@@ -56,13 +57,15 @@ function action(elementId){
     const discountedCostElement = document.getElementById('discounted-cost');
     cost.innerText = 550*seatNoArr.length;
     
-    if(seatNoArr.length<4){
+    if(seatNoArr.length<=4){
         discountedCostElement.innerText = 550*seatNoArr.length;
-        console.log('this is from <4 loop')
+        console.log(seatNoArr.length)
     }
-    if(seatNoArr.length===4){
-        getCoupon();
-        console.log('This is from ===')
+    // jhamela
+    if(seatNoArr.length>0){
+        const submitBtn = document.getElementById('submit');
+        submitBtn.classList.remove('hidden');
+        console.log(seatAmount)
     }
 
 }
